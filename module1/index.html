@@ -10,7 +10,9 @@
 	<h1>List Checker</h1>
 	<div ng-controller="ListController">
 		<div>
-			<input type="text" ng-model="list" ng-keyup="checkList();">
+			<input type="text" ng-model="list"">
+			<br>
+			<button ng-click="checkList();">Check if too much</button>
 			<h1>{{listMessage}}</h1>
 		</div>
 	</div>
