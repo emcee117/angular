@@ -1,20 +1,32 @@
-<!DOCTYPE html>
-<html ng-app="ModuleOneApp">
-<head>
-	<meta charset="utf-8">
-	<script src="angular.min.js"></script>
-	<script src="app.js"></script>
-	<title>AngularJS - Module 1 Assignment</title>
-</head>
+<!doctype html>
+<html lang="en" ng-app="ModuleOneApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
 <body>
-	<h1>Lunch Checker</h1>
-	<div ng-controller="ListController">
-		<div>
-			<input type="text" ng-model="list"">
-			<br>
-			<button ng-click="checkList();">Check if too much</button>
-			<h1>{{listMessage}}</h1>
-		</div>
-	</div>
+   <div class="container" ng-controller="ListController">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group" >
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control" ng-model="list">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="checkList();">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <h1>{{listMessage}}</h1>
+         </div>
+   </div>
+
 </body>
 </html>
