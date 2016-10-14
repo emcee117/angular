@@ -24,9 +24,9 @@ function ListController($scope) {
 			}
 		}
 
-		if (len <= 3) {
+		if (len > 0 && len < 4) {
 			$scope.listMessage = "Thanks!";
-		} else {
+		} else if (len > 3){
 			$scope.listMessage = "Too much!";
 		}
 	}
