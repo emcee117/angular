@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ModuleOneApp">
 <head>
-	<title>Hello</title>
+	<meta charset="utf-8">
+	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
+	<title>AngularJS - Module 1 Assignment</title>
 </head>
 <body>
-<h1>Hello!</h1>
+	<h1>List Checker</h1>
+	<div ng-controller="ListController">
+		<div>
+			<input type="text" ng-model="list" ng-keyup="checkList();">
+			<h1>{{listMessage}}</h1>
+		</div>
+	</div>
 </body>
 </html>
