@@ -24,10 +24,12 @@ function ListController($scope) {
 			}
 		}
 
-		if (len > 0 && len < 4) {
+		if (len > 0 && len <= 3) {
 			$scope.listMessage = "Thanks!";
-		} else if (len > 3){
+		} else if (len >= 4){
 			$scope.listMessage = "Too much!";
+		} else {
+			$scope.listMessage = "Please enter data first.";
 		}
 	}
 }
