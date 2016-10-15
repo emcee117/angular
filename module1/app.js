@@ -29,7 +29,7 @@ function ListController($scope) {
 		} else if (len >= 4){
 			$scope.listMessage = "Too much!";
 		} else {
-			$scope.listMessage = "";
+			$scope.listMessage = "Please enter data first.";
 		}
 	}
 }
