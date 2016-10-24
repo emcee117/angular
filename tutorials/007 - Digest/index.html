@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="CounterApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="../angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>body { font-size: 1.3em; }</style>
+    <title>ng-repeat</title>
+  </head>
+  <body>
+    <h1>The Digest Cycle</h1>
+    <div ng-controller="CounterController">
+      <button ng-click="showNumberOfWatchers()">Log # of Watchers</button>
+      <input ng-model="name">
+      <div>
+        <button ng-click="countOnce()">Up Once counter (Once)</button><br>
+        <button ng-click="upCounter()">Increment counter</button>
+      </div>
+      <div>
+        onceCounter: {{onceCounter}} <br>
+        counter: {{counter}}
+      </div>
+    </div>
+  </body>
+</html>
