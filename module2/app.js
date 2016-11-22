@@ -14,6 +14,11 @@ function ToBuyController(ShoppingListCheckOffService) {
   buyList.buyItem = function (itemIndex) {
     ShoppingListCheckOffService.buyItem(itemIndex);
   };
+
+  //return buy list length is empty
+  buyList.buyAll = function () {
+    return (buyList.items.length === 0);
+  };
 }
 
 AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
@@ -21,6 +26,11 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
   var boughtList = this;
 
   boughtList.items = ShoppingListCheckOffService.alreadyBoughtItems();
+
+  //return bought list length is not empty
+  boughtList.buyNotStarted = function () {
+    return (boughtList.items.length === 0);
+  };
 }
 
 function ShoppingListCheckOffService() {
