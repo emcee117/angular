@@ -45,6 +45,7 @@ function ShoppingListCheckOffService() {
   };
 
   service.buyItem = function (itemIndex) {
+    /* get item */
     var item = {name: toBuy[itemIndex].name, quantity: toBuy[itemIndex].quantity};
 
     //remove item from buy list
