@@ -35,7 +35,6 @@ function ShoppingListCheckOffService() {
   ];
 
   var alreadyBought = [];
-  var started = false;
 
   service.toBuyItems = function () {
     return toBuy;
@@ -48,7 +47,10 @@ function ShoppingListCheckOffService() {
   service.buyItem = function (itemIndex) {
     var item = {name: toBuy[itemIndex].name, quantity: toBuy[itemIndex].quantity};
 
+    //remove item from buy list
     toBuy.splice(itemIndex, 1);
+
+    //push item to bought list
     alreadyBought.push(item);
   };
 }
