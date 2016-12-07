@@ -38,6 +38,7 @@ function ShoppingListController1(ShoppingListFactory) {
   list1.itemQuantity = "";
 
   list1.addItem = function () {
+
     shoppingList.addItem(list1.itemName, list1.itemQuantity);
   }
 
